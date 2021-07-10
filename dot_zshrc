@@ -1,5 +1,5 @@
 # Personal configs
-#using chezmoi
+
 # Neovim config
 alias vim='nvim'
 export EDITOR='nvim'
