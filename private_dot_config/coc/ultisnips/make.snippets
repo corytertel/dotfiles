@@ -1,0 +1,74 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+# Basic Makefile
+snippet makefileC "basic makefile" b
+OBJS = tertel_cory_assn4.o tertel_binary_search_tree.o tertel_word_entry.o
+CC = gcc -std=c20
+DEBUG = -g
+CFLAGS = -Wall -c $(DEBUG)
+LFLAGS = -Wall $(DEBUG)
+EXE = main
+
+$(EXE): $(OBJS)
+	$(CC) $(LFLAGS) $(OBJS) -o $(EXE)
+
+tertel_word_entry.o: tertel_word_entry.h
+	$(CC) $(CFLAGS) tertel_word_entry.cpp
+
+tertel_binary_search_tree.o: tertel_binary_search_tree.cpp
+	$(CC) $(CFLAGS) tertel_binary_search_tree.cpp
+
+tertel_cory_assn4.o: tertel_word_entry.h tertel_binary_search_tree.cpp tertel_cory_assn4.cpp
+	$(CC) $(CFLAGS) tertel_cory_assn4.cpp
+
+clean:
+	rm *.o *~ $(EXE) -v
+endsnippet
+
+# Basic C++ Makefile
+snippet makefileC++ "basic C++ makefile" b
+OBJS = main.o fibonacci_range.o fibonacci_iterator.o
+CXX = g++
+CPPFLAGS = -g -c -Wall -std=c++20
+LDFLAGS = -g -Wall -std=c++20
+EXE = main
+
+$(EXE): $(OBJS)
+	$(CXX) $(LDFLAGS) $(OBJS) -o $(EXE)
+
+fibonacci_iterator.o: fibonacci_iterator.h fibonacci_iterator.cpp
+	$(CXX) $(CPPFLAGS) fibonacci_iterator.cpp
+
+fibonacci_range.o: fibonacci_range.h fibonacci_range.cpp fibonacci_iterator.h
+	$(CXX) $(CPPFLAGS) fibonacci_range.cpp
+
+main.o: main.cpp fibonacci_range.h
+	$(CXX) $(CPPFLAGS) main.cpp
+
+clean:
+	rm *.o $(EXE) -v
+endsnippet
