@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'airblade/vim-gitgutter'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
