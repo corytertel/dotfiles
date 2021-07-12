@@ -8,7 +8,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'ryanoasis/vim-devicons'
 "Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'scrooloose/nerdcommenter'
-Plug 'ayu-theme/ayu-vim'
+"Plug 'ayu-theme/ayu-vim'               "Ayu light theme
+Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 
 " coc config
@@ -29,8 +30,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set termguicolors
-let ayucolor="light"
-colorscheme ayu
+"let ayucolor="light"                   "Ayu light theme
+set background=light                    "Gruvbox theme
+colorscheme gruvbox
 
 " Vim essentials
 syntax enable                           " Enables syntax highlighing

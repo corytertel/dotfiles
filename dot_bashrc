@@ -257,7 +257,7 @@ bash_prompt() {
 	local BACKGROUND_3=$MAGENTA
 	local TEXTEFFECT_3=$BOLD
 
-	local PROMT_FORMAT=$BLACK_BOLD 
+	local PROMT_FORMAT=$WHITE_BOLD 
     
 	############################################################################
 	## EXAMPLE CONFIGURATIONS                                                 ##
