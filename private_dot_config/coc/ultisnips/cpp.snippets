@@ -117,6 +117,28 @@ $1& $1::operator=(const $1& other) = default;
 $1& $1::operator=($1&& other) noexcept = default;
 endsnippet
 
+# C++ Interface
+snippet interface "basic interface" b
+#pragma once
+
+//Interface
+struct $1 {
+	//Constructor
+	$1();
+
+	//Essentials: Destructor and Copy and Move Assignment Operators
+	virtual ~$1();
+	virtual $1& operator=(const $1& other) = 0;
+	virtual $1& operator=($1&& other) noexcept = 0;
+
+	//Interface methods
+
+
+protected:
+
+};
+endsnippet
+
 # C++ Getter
 snippet getter "basic getter" b
 //Getter for $2
