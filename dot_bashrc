@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 # Neovim config
 alias vim='nvim'
 export EDITOR='nvim'
+alias cvim='chezmoi edit'
 
 #!/bin/sh
 
