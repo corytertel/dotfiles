@@ -1,0 +1,36 @@
+#! /bin/sh
+
+# ===Auto Start===
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Start Picom
+picom &
+
+# Wallpaper
+feh --bg-fill $HOME/Pictures/Wallpapers/spaceship-minimalist-sci-fi-digital-art-uhdpaper.com-4K-138.jpg
+
+# Launch Polybar
+~/.config/polybar/launch.sh --forest
+
+# ===BSPWM Configs===
+# Workspaces
+bspc monitor -d I II III IV V VI
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+#bspc rule -a Chromium desktop='^2'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
+bspc rule -a vlc state=floating
+bspc rule -a gwenview state=floating
+
+# Window Visuals
+bspc config border_width         10
+bspc config window_gap           54
+bspc config split_ratio          0.5
+
+# Monocle Mode
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Window border follows cursor
+bspc config focus_follows_pointer false
