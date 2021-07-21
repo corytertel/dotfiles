@@ -12,6 +12,8 @@ PS1='[\u@\h \W]\$ '
 alias vim='nvim'
 export EDITOR='nvim'
 alias cvim='chezmoi edit'
+export ELEMENTS='/run/media/cory/Elements'
+export MUSIC='/run/media/cory/Elements/Public/Music/Playlists/'
 
 #!/bin/sh
 
