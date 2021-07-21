@@ -55,7 +55,7 @@ fi
 picom -f &
 
 # Wallpaper
-feh --bg-fill $HOME/Pictures/Wallpapers/spaceship-minimalist-sci-fi-digital-art-uhdpaper.com-4K-138.jpg
+feh --bg-fill $HOME/Pictures/Wallpapers/anime-girl-rain-umbrella-o0.jpg
 #nitrogen --restore &
 
 # Loop
