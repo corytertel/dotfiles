@@ -10,7 +10,7 @@ dwm_battery () {
     STATUS=$(cat /sys/class/power_supply/BAT1/status)
 
     printf "%s" "$SEP1"
-    if [ "$IDENTIFIER" = "unicode" ]; then
+    if [ "$IDENTIFIER" = "" ]; then
         if [ "$STATUS" = "Charging" ]; then
             printf " %s%% %s" "$CHARGE" "$STATUS"
         else
