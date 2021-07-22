@@ -35,7 +35,7 @@ static const char dmenufont[]       = "RobotoMono Font:size=12";
 static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d8dee9";
-static const char col_gray4[]       = "#d8dee9";
+static const char col_gray4[]       = "#2e3440";
 static const char col_cyan[]        = "#a5abb6";
 
 static const char *colors[][3]      = {
@@ -45,7 +45,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { " ", " ", " ", " ", " ", " ", "7", "8", "9" };
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
