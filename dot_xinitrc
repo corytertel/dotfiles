@@ -58,6 +58,10 @@ picom -f &
 feh --bg-fill $HOME/Pictures/Wallpapers/anime-girl-rain-umbrella-o0.jpg
 #nitrogen --restore &
 
+# Touchpad config
+xinput --set-prop "DLL096D:01 06CB:CDE6 Touchpad" "Synaptics Tap Time" 0
+xinput --set-prop "DLL096D:01 06CB:CDE6 Touchpad" "Synaptics Palm Detection" 1
+
 # Loop
 while true; do
     dwm >/dev/null 2>&1
