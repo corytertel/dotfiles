@@ -1,0 +1,70 @@
+
+** Gnome Classic
+From the GDM login menu, you can select "Gnome Classic" as a desktop
+session.
+
+** Add the EPEL
+The EPEL (Extra Packages for Enterprise Linux) is essential for a
+desktop workstation. It has all the missing packages which servers
+don't need but you as a user will need.
+dnf install -y epel-release
+
+Wireguard
+ZFS?
+Emacs (emacs pgtk)
+Gnome Classic
+qBittorrent
+mc?
+tilix?
+Dotfiles?
+Set the clock to 12-hour
+Discord
+Eclipse
+Dconf Editor
+draw.io
+Gnome Drawing
+LibreOffice
+
+Add flatpak to Gnome Software
+https://docs.rockylinux.org/desktop/gnome/flatpak/
+sudo dnf install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+** Emacs
+git clone --depth=1 git://git.savannah.gnu.org/emacs.git
+sudo dnf groupinstall "Development Tools" "Development Libraries"
+gtk3-devel
+gnutls-devel
+ncurses-devel
+https://github.com/NapoleonWils0n/cerberus/blob/master/fedora/emacs-build-fedora.org
+
+** Tilix
+Tilix terminal is essentially the same as Gnome Terminal, but
+with additional features. It integrates with Gnome just as well and is
+also made by the Gnome project.
+sudo dnf install tilix
+Tilix requires some additional setup:
+https://gnunn1.github.io/tilix-web/manual/vteconfig/
+
+dconf dump /com/gexperts/Tilix/ > tilix.dconf
+dconf load /com/gexperts/Tilix/ < tilix.dconf
+
+** PowerShell
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/powershell-7.5.0-1.rh.x86_64.rpm
+Add tilix powershell profile
+Add powershell.desktop file to /usr/share/applications
+Add powershell icon to /usr/share/icons/hicolor/scalable/apps
+Copy profile.ps1 to ~/.config/powershell/Microsoft.PowerShell_profile.ps1
+
+Add Dvorak Keyboard
+
+** Nvidia Drivers
+https://docs.rockylinux.org/desktop/display/installing_nvidia_gpu_drivers/
+sudo dnf install -y epel-release
+sudo dnf install -y kernel-devel
+sudo dnf install -y dkms
+sudo dnf config-manager --add-repo http://developer.download.nvidia.com/compute/cuda/repos/rhel9/$(uname -i)/cuda-rhel9.repo
+sudo dnf install kernel-headers-$(uname -r) kernel-devel-$(uname -r) tar bzip2 make automake gcc gcc-c++ pciutils elfutils-libelf-devel libglvnd-opengl libglvnd-glx libglvnd-devel acpid pkgconf dkms -y
+sudo dnf module install nvidia-driver:latest-dkms -y
+sudo grubby --args="nouveau.modeset=0 rd.driver.blacklist=nouveau" --update-kernel=ALL

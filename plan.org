@@ -1,0 +1,15 @@
+
+
+RHEL 9 because at the time of install, RHEL 10 would not have much
+support or resources. RHEL 10 would be brand new. Even RHEL 9 was
+newer. I am worried about community support and being about to
+diagnose problems. I want to run setups which people have run and
+documented before. I want all the problems worked out.
+
+XFS over LVM w/ VDO
+Stratis
+
+Boom-boot
+
+
+Sudo policies
