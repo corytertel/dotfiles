@@ -1,0 +1,88 @@
+[Palette]
+Name=PowerShell
+Primary=true
+
+# For the titlebar colors, match the Gnome theme
+# I.e. for the light theme, match the Gnome light theme,
+# and for the dark theme, match the Gnome dark theme.
+
+# Other than that, the light theme and dark theme 
+# for PowerShell should be identical.
+
+[Light]
+Foreground=#eeedf0
+Background=#012456
+TitlebarBackground=#ffffff
+TitlebarForeground=#333333
+Cursor=#fedba9
+# Black
+Color0=#000000
+# DarkRed
+Color1=#800000
+# DarkGreen
+Color2=#008000
+# DarkYellow
+Color3=#808000
+# DarkBlue
+Color4=#000080
+# DarkMagenta
+Color5=#800080
+# DarkCyan
+Color6=#008080
+# Gray
+Color7=#c0c0c0
+# DarkGray
+Color8=#808080
+# Red
+Color9=#ff0000
+# Green
+Color10=#00ff00
+# Yellow
+Color11=#ffff00
+# Blue
+Color12=#0000ff
+# Magenta
+Color13=#ff00ff
+# Cyan
+Color14=#00ffff
+# White
+Color15=#ffffff
+
+[Dark]
+Foreground=#eeedf0
+Background=#012456
+TitlebarBackground=#2e2e32
+TitlebarForeground=#ffffff
+Cursor=#fedba9
+# Black
+Color0=#000000
+# DarkRed
+Color1=#800000
+# DarkGreen
+Color2=#008000
+# DarkYellow
+Color3=#808000
+# DarkBlue
+Color4=#000080
+# DarkMagenta
+Color5=#800080
+# DarkCyan
+Color6=#008080
+# Gray
+Color7=#c0c0c0
+# DarkGray
+Color8=#808080
+# Red
+Color9=#ff0000
+# Green
+Color10=#00ff00
+# Yellow
+Color11=#ffff00
+# Blue
+Color12=#0000ff
+# Magenta
+Color13=#ff00ff
+# Cyan
+Color14=#00ffff
+# White
+Color15=#ffffff
